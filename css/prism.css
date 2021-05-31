@@ -1,0 +1,230 @@
+/* PrismJS 1.22.0
+https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+abap+abnf+actionscript+ada+agda+al+antlr4+apacheconf+apex+apl+applescript+aql+arduino+arff+asciidoc+aspnet+asm6502+autohotkey+autoit+bash+basic+batch+bbcode+birb+bison+bnf+brainfuck+brightscript+bro+bsl+c+csharp+cpp+cil+clojure+cmake+coffeescript+concurnas+csp+crystal+css-extras+cypher+d+dart+dataweave+dax+dhall+diff+django+dns-zone-file+docker+ebnf+editorconfig+eiffel+ejs+elixir+elm+etlua+erb+erlang+excel-formula+fsharp+factor+firestore-security-rules+flow+fortran+ftl+gml+gcode+gdscript+gedcom+gherkin+git+glsl+go+graphql+groovy+haml+handlebars+haskell+haxe+hcl+hlsl+http+hpkp+hsts+ichigojam+icon+ignore+inform7+ini+io+j+java+javadoc+javadoclike+javastacktrace+jolie+jq+jsdoc+js-extras+json+json5+jsonp+jsstacktrace+js-templates+julia+keyman+kotlin+latex+latte+less+lilypond+liquid+lisp+livescript+llvm+lolcode+lua+makefile+markdown+markup-templating+matlab+mel+mizar+mongodb+monkey+moonscript+n1ql+n4js+nand2tetris-hdl+naniscript+nasm+neon+nginx+nim+nix+nsis+objectivec+ocaml+opencl+oz+parigp+parser+pascal+pascaligo+pcaxis+peoplecode+perl+php+phpdoc+php-extras+plsql+powerquery+powershell+processing+prolog+promql+properties+protobuf+pug+puppet+pure+purebasic+purescript+python+q+qml+qore+r+racket+jsx+tsx+reason+regex+renpy+rest+rip+roboconf+robotframework+ruby+rust+sas+sass+scss+scala+scheme+shell-session+smali+smalltalk+smarty+sml+solidity+solution-file+soy+sparql+splunk-spl+sqf+sql+stan+iecst+stylus+swift+t4-templating+t4-cs+t4-vb+tap+tcl+tt2+textile+toml+turtle+twig+typescript+typoscript+unrealscript+vala+vbnet+velocity+verilog+vhdl+vim+visual-basic+warpscript+wasm+wiki+xeora+xml-doc+xojo+xquery+yaml+yang+zig&plugins=line-numbers+custom-class */
+/**
+ * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/chriskempson/tomorrow-theme
+ * @author Rose Pritchard
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #ccc;
+	background: none;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.3;					/* 更改行高 */ 
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;			/* 1em -> 0em */
+	margin: .0em 0;			/* .5em -> .0em */
+	overflow: auto;
+	border-radius: .5em;                 /* 更改边框弧度 */
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #2d2d2d;
+	background: #1E1E1E;			/* vscode */
+	background: #183055;			/* gitbook */
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #999;
+  /*color: #9DAAB6;*/
+}
+.token.punctuation {
+	color: #ccc;
+  /*color: #E6ECF1;*/
+}
+.token.tag,
+.token.namespace,
+.token.deleted {
+	color: #e2777a;
+  color: #2C7AD6; 	/* vscode */
+}
+.token.function-name {
+	color: #6196cc;
+}
+.token.boolean,
+.token.number,
+.token.function {
+	color: #f08d49;
+  color: #FF9D3D;
+}
+.token.attr-name,			/* should be #2C7AD6 */
+.token.property,
+.token.class-name,
+.token.constant,
+.token.symbol {
+	color: #f8c555;
+	color: #4FB8FE			/* vscode */
+}
+.token.selector,
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.builtin {
+	color: #cc99cd;
+  color: #B4F6D6;
+  color: #D7BA5E;	/* vscode */
+}
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex,
+.token.variable {
+	color: #7ec699;
+	color: #CE9178;        /* vscode */
+  /*color: #71A7FF;*/
+}
+.token.operator,
+.token.entity,
+.token.url {
+	color: #67cdcc;
+  /*color: #71A7FF;*/
+}
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+.token.entity {
+	cursor: help;
+}
+.token.inserted {
+	color: green;
+}
+
+/*
+pre[class*="language-"].line-numbers {
+	position: relative;
+	padding-left: 3.8em;
+	counter-reset: linenumber;
+}
+pre[class*="language-"].line-numbers > code {
+	position: relative;
+	white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	font-size: 100%;
+	left: -3.8em;
+	width: 3em; 	/* works for line-numbers below 1000 lines /
+	letter-spacing: -1px;
+	/*border-right: 1px solid #999;/     /* 数字对齐竖线 /
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.line-numbers-rows > span {
+	display: block;
+	counter-increment: linenumber;
+}
+.line-numbers-rows > span:before {
+	content: counter(linenumber);
+	color: #999;
+	display: block;
+	padding-right: 0.8em;
+	text-align: right;
+}
+*/
+
+/* gitbook */
+.token.comment,.token.prolog,.token.doctype,.token.cdata{color:#9daab6}
+.token.punctuation{color:#e6ecf1}
+.token.namespace{opacity:.7}
+.token.operator,.token.boolean,.token.number{color:#ff9d3d}
+.token.property{color:#ffd6ad}
+.token.tag{color:#71a7ff}
+.token.string{color:#71a7ff}
+.token.selector{color:#b4f6d6}
+.token.attr-name{color:#ff9d3d}
+.token.entity,.token.url,.language-css .token.string,.style .token.string{color:#71a7ff}
+.token.attr-value,.token.keyword,.token.control,.token.directive,.token.unit{color:#61e3a5}
+.token.statement,.token.regex,.token.atrule{color:#71a7ff}
+.token.placeholder,.token.variable{color:#71a7ff}
+.token.deleted{text-decoration:line-through}
+.token.inserted{border-bottom:1px dotted #fff;text-decoration:none}
+.token.italic{font-style:italic}
+.token.important,.token.bold{font-weight:700}
+.token.important{color:#ff7e7b}
+.token.entity{cursor:help}
+
+pre>code.highlight{outline:.4em solid #ff7e7b;outline-offset:.4em}
+.line-numbers .line-numbers-rows{border-right-color:#5c6975}
+.line-numbers-rows>span:before{color:#74818d}
+.line-highlight{background:#e6ecf133;background:linear-gradient(to right,#E6ECF133 70%,#E6ECF100)}
+
+:not(pre) > code[class*="language-"],pre[class*="language-"] {
+	background: #183055;			/* gitbook */
+}
+pre[class*="language-"] {
+	border-radius: .2em;              /* 更改边框弧度 */
+}
+/* /gitbook */
+
+pre[class*="language-"].line-numbers {
+	position: relative;
+	padding-left: 3.0em;              /* 更改行号间隔 */
+	counter-reset: linenumber;
+}
+pre[class*="language-"].line-numbers > code {
+	position: relative;
+	white-space: inherit;
+}
+.line-numbers .line-numbers-rows {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	font-size: 100%;
+	left: -2.7em;					  /* 更改行号间隔 */					 
+	width: 3em; 	/* works for line-numbers below 1000 lines */
+	letter-spacing: -1px;
+	/*border-right: 1px solid #999;  数字对齐竖线 */
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.line-numbers-rows > span {
+	display: block;
+	counter-increment: linenumber;
+}
+.line-numbers-rows > span:before {
+	content: counter(linenumber);
+	color: #5c6975;
+	display: block;
+	padding-right: 0.0em;
+	text-align: center;
+}
